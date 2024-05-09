@@ -1,4 +1,4 @@
-const API_KEY = 'HjXxZtDdGQEwmF9lTmn66FXf6lMavPEBaVhYEf0R';
+import { API_KEY } from "./api_key";
 
 // Функция для выполнения запроса к API NASA и получения данных о космических фотографиях
 async function fetchNASAData() {
