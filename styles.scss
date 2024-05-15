@@ -68,29 +68,41 @@
 
   }
 
-  aside {
-    min-height: 100vh;
-    width: 200px;
-    background-color: antiquewhite;
-    padding: 20px;
-    align-items: start;
+  &__primary {
+    display: flex;
+    align-items: flex-start;
 
-    button {
-      height: 50px;
-      width: 100px;
-      background-color: olivedrab;
-      margin-top: 20px;
-      border: none;
-      cursor: pointer;
+    aside {
+      min-height: 100vh;
+      width: 200px;
+      background-color: antiquewhite;
+      padding: 20px;
+      align-items: start;
   
-      &:first-child {
-        margin-top: 0;
+      button {
+        height: 50px;
+        width: 100px;
+        background-color: olivedrab;
+        margin-top: 20px;
+        border: none;
+        cursor: pointer;
+    
+        &:first-child {
+          margin-top: 0;
+        }
+    
+        &:hover {
+          background-color: blue;
+        }
       }
-  
-      &:hover {
-        background-color: blue;
-      }
+    }
 
+    main {
+      padding: 20px;
+      min-height: 100vh;
+      width: 100%;
     }
   }
+
+  
 }
