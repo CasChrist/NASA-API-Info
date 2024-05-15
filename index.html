@@ -16,6 +16,7 @@
                 mainDiv.style.display = 'block';
                 let mainDiv2 = document.querySelector('.login');
                 mainDiv2.style.display = 'none';
+                document.getElementById('username').textContent = 'Привет, ' + userInput + '!';
                 }
         }
     </script>
@@ -30,8 +31,7 @@
     </div>
     <div class="main">
         <header>
-            <span>Сайт</span>
-            <span>для ЯП</span>
+            <span id="username"></span>
         </header>
         <aside>
 
