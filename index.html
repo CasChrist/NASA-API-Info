@@ -8,10 +8,15 @@
 
     <script>
         function showMain() {
-            var mainDiv = document.querySelector('.main');
-            mainDiv.style.display = 'block';
-            var mainDiv2 = document.querySelector('.login');
-            mainDiv2.style.display = 'none';
+            let userInput = document.querySelector('input[type="text"]').value;
+            if (userInput.trim() === '') {
+                alert("Поле ввода пустое!");
+            } else {
+                let mainDiv = document.querySelector('.main');
+                mainDiv.style.display = 'block';
+                let mainDiv2 = document.querySelector('.login');
+                mainDiv2.style.display = 'none';
+                }
         }
     </script>
 </head>
