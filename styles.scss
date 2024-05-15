@@ -7,12 +7,48 @@
   width: 100%;
   min-height: 100vh;
   background-color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    height: 50vh;
+    width: 40%;
+    background-color: olive;
+    padding: 20px;
+
+    span {
+      font-size: 20px;
+      // margin: 20px;
+      display: block;
+    }
+
+    input {
+      height: 30px;
+      width: 70%;
+      background-color: indianred;
+      border: none;
+      outline: none;
+      display: block;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      height: 10%;
+      width: 20%;
+      background-color: goldenrod;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+  }
 }
 
 .main {
   width: 100%;
   min-height: 100vh;
   background-color: #555;
+  display: none;
   // display: flex;
   // align-items: start;
 

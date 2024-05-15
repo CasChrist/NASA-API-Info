@@ -5,9 +5,24 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>NASA Image of the Day</title>
     <link rel="stylesheet" type = "text/css" href="styles.css">
+
+    <script>
+        function showMain() {
+            var mainDiv = document.querySelector('.main');
+            mainDiv.style.display = 'block';
+            var mainDiv2 = document.querySelector('.login');
+            mainDiv2.style.display = 'none';
+        }
+    </script>
 </head>
 <body>
-    <div class="login"></div>
+    <div class="login">
+        <div class="login__content">
+            <span>Введите имя пользователя:</span>
+            <input type="text" placeholder="Имя">
+            <button onclick="showMain()">Войти</button>
+        </div>
+    </div>
     <div class="main">
         <header>
             <span>Сайт</span>

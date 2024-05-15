@@ -7,12 +7,43 @@
   width: 100%;
   min-height: 100vh;
   background-color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login__content {
+  height: 50vh;
+  width: 40%;
+  background-color: olive;
+  padding: 20px;
+}
+.login__content span {
+  font-size: 20px;
+  display: block;
+}
+.login__content input {
+  height: 30px;
+  width: 70%;
+  background-color: indianred;
+  border: none;
+  outline: none;
+  display: block;
+  margin-top: 20px;
+}
+.login__content button {
+  margin-top: 20px;
+  height: 10%;
+  width: 20%;
+  background-color: goldenrod;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
 .main {
   width: 100%;
   min-height: 100vh;
   background-color: #555;
+  display: none;
 }
 .main header {
   width: 100%;
