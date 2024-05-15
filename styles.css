@@ -61,4 +61,20 @@
   min-height: 100vh;
   width: 200px;
   background-color: antiquewhite;
+  padding: 20px;
+  align-items: start;
+}
+.main aside button {
+  height: 50px;
+  width: 100px;
+  background-color: olivedrab;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+.main aside button:first-child {
+  margin-top: 0;
+}
+.main aside button:hover {
+  background-color: blue;
 }

@@ -72,5 +72,25 @@
     min-height: 100vh;
     width: 200px;
     background-color: antiquewhite;
+    padding: 20px;
+    align-items: start;
+
+    button {
+      height: 50px;
+      width: 100px;
+      background-color: olivedrab;
+      margin-top: 20px;
+      border: none;
+      cursor: pointer;
+  
+      &:first-child {
+        margin-top: 0;
+      }
+  
+      &:hover {
+        background-color: blue;
+      }
+
+    }
   }
 }
