@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.login {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #555;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #555;
+}
+.main header {
+  width: 100%;
+  height: 100px;
+  background-color: darkgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main header span {
+  margin: 20px;
+  font-size: 20px;
+}
+.main aside {
+  min-height: 100vh;
+  width: 200px;
+  background-color: antiquewhite;
+}
