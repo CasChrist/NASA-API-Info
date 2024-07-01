@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+a {
+  color: orange;
+}
+
 .login {
   width: 100%;
   min-height: 100vh;
@@ -144,10 +148,6 @@
 
       li {
         padding-bottom: 4px;
-        
-        a {
-          color: orange;
-        }
       }
     }
   }

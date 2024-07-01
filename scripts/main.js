@@ -4,7 +4,7 @@ import { renderNASAData, renderFLRData } from './display.js';
 
 // Функция для инициализации метода Image of The Day
 function chooseDate1() {
-    const nasaContainer = document.getElementById('nasa-container');
+    const nasaContainer = document.getElementById('inputs');
     nasaContainer.innerHTML = `
     <h3>Enter the desired date (format YYYY-MM-DD):</h3><br>
     <input id="date"></input>
