@@ -70,7 +70,7 @@
 }
 .main__primary aside button {
   height: 50px;
-  width: 100px;
+  width: 165px;
   background-color: olivedrab;
   margin-top: 20px;
   border: none;
@@ -81,6 +81,9 @@
 }
 .main__primary aside button:hover {
   background-color: blue;
+}
+.main__primary aside button:active {
+  background-color: red;
 }
 .main__primary main {
   padding: 20px;

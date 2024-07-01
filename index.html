@@ -21,10 +21,10 @@
         }
     </script>
     <script type="module">
-        import { init } from './scripts/main.js';
+        import { chooseDate, imgDay } from './scripts/main.js';
 
         window.onload = function() {
-            document.getElementById('imgDay').onclick = init;
+            document.getElementById('imageOfTheDay').onclick = chooseDate;
         }
     </script>
 </head>
@@ -42,15 +42,15 @@
         </header>
         <div class="main__primary">
             <aside>
-                <button id="imgDay">1</button>
+                <button id="imageOfTheDay">Image of The Day</button>
 
                 <button>2</button>
                 <button>3</button>
             </aside>
             <main>
-                <div id="nasa-container"></div>
-                
-                <!-- <p>Lorem ipsum dolor sit amet...</p> -->
+                <div id="nasa-container">
+                    <h2>Choose a method from the sidebar.</h2>
+                </div>
             </main>
         </div>
     </div>

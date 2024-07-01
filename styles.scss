@@ -81,7 +81,7 @@
   
       button {
         height: 50px;
-        width: 100px;
+        width: 165px;
         background-color: olivedrab;
         margin-top: 20px;
         border: none;
@@ -93,6 +93,10 @@
     
         &:hover {
           background-color: blue;
+        }
+
+        &:active {
+          background-color: red;
         }
       }
     }
