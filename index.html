@@ -10,13 +10,13 @@
         function showMain() {
             let userInput = document.querySelector('input[type="text"]').value;
             if (userInput.trim() === '') {
-                alert("Поле ввода пустое!");
+                alert("Input field empty!");
             } else {
                 let mainDiv = document.querySelector('.main');
                 mainDiv.style.display = 'block';
                 let mainDiv2 = document.querySelector('.login');
                 mainDiv2.style.display = 'none';
-                document.getElementById('username').textContent = 'Привет, ' + userInput + '!';
+                document.getElementById('username').textContent = 'Hello, ' + userInput + '!';
                 }
         }
     </script>
@@ -31,9 +31,9 @@
 <body>
     <div class="login">
         <div class="login__content">
-            <span>Введите имя пользователя:</span>
-            <input type="text" placeholder="Имя">
-            <button onclick="showMain()">Войти</button>
+            <span>Enter username:</span>
+            <input type="text" placeholder="Name">
+            <button onclick="showMain()">Login</button>
         </div>
     </div>
     <div class="main">
