@@ -11,4 +11,25 @@ function renderNASAData(nasaData) {
   `;
 }
 
-export { renderNASAData };
+function renderFLRData(FLRData) {
+  const nasaContainer = document.getElementById('nasa-container');
+
+  // Создаём маркированный список
+  let ul = document.createElement('ul');
+  ul.setAttribute('id', 'solarFlareInfo');
+  nasaContainer.appendChild(ul);
+  
+  // Находим созданный маркированный список
+  ulTag = document.getElementById('solarFlareInfo');
+
+  info = FLRData;
+
+  // Добавляем каждый элемент info в виде пунктов списка
+  info.forEach(function(info) {
+    var li = document.createElement('li');
+    li.innerHTML = info;
+    ulTag.appendChild(li);
+});
+}
+
+export { renderNASAData, renderFLRData };
