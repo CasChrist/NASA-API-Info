@@ -3,23 +3,26 @@ import { processNASAData, processFLRData } from './data.js';
 import { renderNASAData, renderFLRData } from './display.js';
 
 // Функция для инициализации метода Image of The Day
-function chooseDate() {
+function chooseDate1() {
     const nasaContainer = document.getElementById('nasa-container');
     nasaContainer.innerHTML = `
-    <p>Enter the desired date (format YYYY-MM-DD):</p><br>
+    <h3>Enter the desired date (format YYYY-MM-DD):</h3><br>
     <input id="date"></input>
-    <button id="temp">Submit</button>`
-    try {
-        document.getElementById('temp').onclick = imgDay;
-    } catch {
-        console.log('mismatch');
-    }
+    <button id="temp">Submit</button>
+    <button id="clear" onclick="clearNASA()">Clear</button>`
+    document.getElementById('temp').onclick = imgDay;
+     
+}
 
-    try {
-        document.getElementById('temp').onclick = FLR;
-    } catch {
-        console.log('mismatch');
-    }
+// Функция для инициализации метода Solar Flare
+function chooseDate2() {
+    const nasaInputContainer = document.getElementById('inputs');
+    nasaInputContainer.innerHTML = `
+    <h3>Enter the desired date (format YYYY-MM-DD):</h3><br>
+    <input id="date"></input>
+    <button id="temp">Submit</button>
+    <button id="clear" onclick="clearNASA()">Clear</button>`
+    document.getElementById('temp').onclick = FLR;
 }
 
 async function imgDay() {
@@ -38,6 +41,8 @@ async function imgDay() {
 }
 
 async function FLR() {
+    document.getElementById('results').innerHTML = '';
+
     const date = document.getElementById('date').value;
     const FLRData = await fetchFLRData(date);
 
@@ -52,6 +57,6 @@ async function FLR() {
     }
 }
 
-export { chooseDate, imgDay, FLR };
+export { chooseDate1, chooseDate2, imgDay, FLR };
 
 console.log('script main.js loaded');

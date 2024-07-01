@@ -10,7 +10,8 @@ function processNASAData(data) {
 }
 
 function processFLRData(data) {
-  solar_flare = data;
+  let solarFlare = data[0];
+  console.log(solarFlare);
   
   // Извлекаем нужную информацию
   let info = [
@@ -25,9 +26,13 @@ function processFLRData(data) {
   ];
 
   // Добавляем связанные события в список
-  solarFlare.linkedEvents.forEach(function(event) {
-    info.push("- " + event.activityID);
-  });
+  try {
+    solarFlare.linkedEvents.forEach(function(event) {
+      info.push("- " + event.activityID);
+    });
+  } catch {
+    info.push('null');
+  }
 
   return info;
 }

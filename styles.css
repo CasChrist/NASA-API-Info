@@ -113,3 +113,13 @@
 .main__primary main article p {
   padding-bottom: 30px;
 }
+.main__primary main ul {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.main__primary main ul li {
+  padding-bottom: 4px;
+}
+.main__primary main ul li a {
+  color: orange;
+}

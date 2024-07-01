@@ -1,28 +1,26 @@
 // Функция для отображения данных о космической фотографии на странице
 function renderNASAData(nasaData) {
-  const nasaContainer = document.getElementById('nasa-container');
-  nasaContainer.innerHTML = `
-    <article>
+  const nasaResultContainer = document.getElementById('results');
+  nasaResultContainer.innerHTML = `
       <h2>${nasaData.title}</h2>
       <time>Date: ${nasaData.date}</time>
       <p>${nasaData.explanation}</p>
       <img src="${nasaData.imageURL}" alt="NASA Image of the Day">
-    </article>
   `;
 }
 
 function renderFLRData(FLRData) {
-  const nasaContainer = document.getElementById('nasa-container');
+  const nasaResultContainer = document.getElementById('results');
 
   // Создаём маркированный список
   let ul = document.createElement('ul');
   ul.setAttribute('id', 'solarFlareInfo');
-  nasaContainer.appendChild(ul);
+  nasaResultContainer.appendChild(ul);
   
   // Находим созданный маркированный список
-  ulTag = document.getElementById('solarFlareInfo');
+  let ulTag = document.getElementById('solarFlareInfo');
 
-  info = FLRData;
+  let info = FLRData;
 
   // Добавляем каждый элемент info в виде пунктов списка
   info.forEach(function(info) {
