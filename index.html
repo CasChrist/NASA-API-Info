@@ -23,6 +23,21 @@
         function clearNASA() {
             document.getElementById('results').innerHTML = '';
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.color-button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove the 'active' class from all buttons
+                buttons.forEach(btn => btn.classList.remove('active'));
+
+                // Add the 'active' class to the clicked button
+                button.classList.add('active');
+            });
+    });
+});
+
     </script>
     <script type="module">
         import { chooseDate1, chooseDate2 } from './scripts/main.js';
@@ -47,8 +62,8 @@
         </header>
         <div class="main__primary">
             <aside>
-                <button id="imageOfTheDay">Image of The Day</button>
-                <button id="solarFlare">Solar Flare</button>
+                <button id="imageOfTheDay" class="color-button">Image of The Day</button>
+                <button id="solarFlare" class="color-button">Solar Flare</button>
             </aside>
             <main>
                 <div id="nasa-container">

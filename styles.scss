@@ -7,6 +7,7 @@ a {
   color: orange;
 }
 
+
 .login {
   width: 100%;
   min-height: 100vh;
@@ -53,8 +54,6 @@ a {
   min-height: 100vh;
   background-color: #555;
   display: none;
-  // display: flex;
-  // align-items: start;
 
   header {
     width: 100%;
@@ -83,24 +82,20 @@ a {
       padding: 20px;
       align-items: start;
   
-      button {
+      button.color-button {
         height: 50px;
         width: 165px;
         background-color: olivedrab;
         margin-top: 20px;
         border: none;
         cursor: pointer;
+
+        &.active {
+          background-color: orange;
+        }
     
         &:first-child {
           margin-top: 0;
-        }
-    
-        &:hover {
-          background-color: blue;
-        }
-
-        &:active {
-          background-color: red;
         }
       }
     }
