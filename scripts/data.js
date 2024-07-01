@@ -16,23 +16,19 @@ function processFLRData(data) {
   // Извлекаем нужную информацию
   let info = [
     "FLR ID: " + solarFlare.flrID,
-    "Начало: " + solarFlare.beginTime,
-    "Пик: " + solarFlare.peakTime,
-    "Тип класса: " + solarFlare.classType,
-    "Регион на солнце: " + solarFlare.sourceLocation,
-    "Примечание: " + solarFlare.note,
-    "Ссылка на подробности: <a href='" + solarFlare.link + "' target='_blank'>" + solarFlare.link + "</a>",
-    "Связанные события:"
+    "Begin Time: " + solarFlare.beginTime,
+    "Peak Time: " + solarFlare.peakTime,
+    "Class Type: " + solarFlare.classType,
+    "Source Location: " + solarFlare.sourceLocation,
+    "Note, if any: " + solarFlare.note,
+    "More Info: <a href='" + solarFlare.link + "' target='_blank'>" + solarFlare.link + "</a>",
+    "Linked Events, if any:"
   ];
 
   // Добавляем связанные события в список
-  try {
-    solarFlare.linkedEvents.forEach(function(event) {
-      info.push("- " + event.activityID);
-    });
-  } catch {
-    info.push('null');
-  }
+  solarFlare.linkedEvents.forEach(function(event) {
+    info.push("- " + event.activityID);
+  });
 
   return info;
 }
