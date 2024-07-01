@@ -16,4 +16,6 @@ async function init() {
     }
 }
 
-init()
+export { init };
+
+console.log('script main.js loaded')

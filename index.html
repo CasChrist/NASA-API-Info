@@ -20,6 +20,13 @@
                 }
         }
     </script>
+    <script type="module">
+        import { init } from './scripts/main.js';
+
+        window.onload = function() {
+            document.getElementById('imgDay').onclick = init;
+        }
+    </script>
 </head>
 <body>
     <div class="login">
@@ -35,13 +42,14 @@
         </header>
         <div class="main__primary">
             <aside>
-                <button>1</button>
+                <button id="imgDay">1</button>
+
                 <button>2</button>
                 <button>3</button>
             </aside>
             <main>
                 <div id="nasa-container"></div>
-                <script type="module" src="scripts/main.js"></script>
+                
                 <!-- <p>Lorem ipsum dolor sit amet...</p> -->
             </main>
         </div>
