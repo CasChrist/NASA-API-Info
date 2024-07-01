@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+a {
+  color: orange;
+}
+
 .login {
   width: 100%;
   min-height: 100vh;
@@ -68,7 +72,7 @@
   padding: 20px;
   align-items: start;
 }
-.main__primary aside button {
+.main__primary aside button.color-button {
   height: 50px;
   width: 165px;
   background-color: olivedrab;
@@ -76,14 +80,11 @@
   border: none;
   cursor: pointer;
 }
-.main__primary aside button:first-child {
+.main__primary aside button.color-button.active {
+  background-color: orange;
+}
+.main__primary aside button.color-button:first-child {
   margin-top: 0;
-}
-.main__primary aside button:hover {
-  background-color: blue;
-}
-.main__primary aside button:active {
-  background-color: red;
 }
 .main__primary main {
   padding: 20px;
@@ -112,4 +113,11 @@
 }
 .main__primary main article p {
   padding-bottom: 30px;
+}
+.main__primary main ul {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.main__primary main ul li {
+  padding-bottom: 4px;
 }

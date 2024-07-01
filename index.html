@@ -19,12 +19,32 @@
                 document.getElementById('username').textContent = 'Hello, ' + userInput + '!';
                 }
         }
+
+        function clearNASA() {
+            document.getElementById('results').innerHTML = '';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.color-button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove the 'active' class from all buttons
+                buttons.forEach(btn => btn.classList.remove('active'));
+
+                // Add the 'active' class to the clicked button
+                button.classList.add('active');
+            });
+    });
+});
+
     </script>
     <script type="module">
-        import { chooseDate, imgDay } from './scripts/main.js';
+        import { chooseDate1, chooseDate2 } from './scripts/main.js';
 
         window.onload = function() {
-            document.getElementById('imageOfTheDay').onclick = chooseDate;
+            document.getElementById('imageOfTheDay').onclick = chooseDate1;
+            document.getElementById('solarFlare').onclick = chooseDate2;
         }
     </script>
 </head>
@@ -42,14 +62,15 @@
         </header>
         <div class="main__primary">
             <aside>
-                <button id="imageOfTheDay">Image of The Day</button>
-
-                <button>2</button>
-                <button>3</button>
+                <button id="imageOfTheDay" class="color-button">Image of The Day</button>
+                <button id="solarFlare" class="color-button">Solar Flare</button>
             </aside>
             <main>
                 <div id="nasa-container">
-                    <h2>Choose a method from the sidebar.</h2>
+                    <section id="inputs">
+                        <h2>Choose a method from the sidebar.</h2>
+                    </section>
+                    <article id="results"></article>
                 </div>
             </main>
         </div>
