@@ -1,4 +1,4 @@
-import { API_KEY } from "./api_key";
+import { API_KEY } from "./api_key.js";
 
 // Функция для выполнения запроса к API NASA и получения данных о космических фотографиях
 async function fetchNASAData() {
