@@ -1,9 +1,10 @@
-import { API_KEY } from "./api_key";
+import { API_KEY } from "./api_key.js";
 
 // Функция для выполнения запроса к API NASA и получения данных о космических фотографиях
-async function fetchNASAData() {
+async function fetchNASAData(date) {
     try {
-        const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`);
+        document.getElementById
+        const response = await fetch(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=${API_KEY}`);
         const data = await response.json();
         return data; // Возвращаем объект с данными о космической фотографии дня
     } catch (error) {

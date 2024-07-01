@@ -3,8 +3,19 @@ import { processNASAData } from './data.js';
 import { renderNASAData } from './display.js';
 
 // Функция для инициализации приложения
-async function init() {
-    const nasaData = await fetchNASAData();
+function chooseDate() {
+    const nasaContainer = document.getElementById('nasa-container');
+    nasaContainer.innerHTML = `
+    <p>Enter the desired date (format YYYY-MM-DD):</p><br>
+    <input id="date"></input>
+    <button id="temp">Submit</button>`
+    document.getElementById('temp').onclick = imgDay;
+}
+
+async function imgDay() {
+    const date = document.getElementById('date').value;
+    const nasaData = await fetchNASAData(date);
+    
     if (nasaData) {
         const processedData = processNASAData(nasaData);
         renderNASAData(processedData);
@@ -16,4 +27,6 @@ async function init() {
     }
 }
 
-init();
+export { chooseDate, imgDay };
+
+console.log('script main.js loaded')

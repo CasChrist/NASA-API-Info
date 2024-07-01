@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
@@ -10,23 +10,30 @@
         function showMain() {
             let userInput = document.querySelector('input[type="text"]').value;
             if (userInput.trim() === '') {
-                alert("Поле ввода пустое!");
+                alert("Input field empty!");
             } else {
                 let mainDiv = document.querySelector('.main');
                 mainDiv.style.display = 'block';
                 let mainDiv2 = document.querySelector('.login');
                 mainDiv2.style.display = 'none';
-                document.getElementById('username').textContent = 'Привет, ' + userInput + '!';
+                document.getElementById('username').textContent = 'Hello, ' + userInput + '!';
                 }
+        }
+    </script>
+    <script type="module">
+        import { chooseDate, imgDay } from './scripts/main.js';
+
+        window.onload = function() {
+            document.getElementById('imageOfTheDay').onclick = chooseDate;
         }
     </script>
 </head>
 <body>
     <div class="login">
         <div class="login__content">
-            <span>Введите имя пользователя:</span>
-            <input type="text" placeholder="Имя">
-            <button onclick="showMain()">Войти</button>
+            <span>Enter username:</span>
+            <input type="text" placeholder="Name">
+            <button onclick="showMain()">Login</button>
         </div>
     </div>
     <div class="main">
@@ -35,16 +42,17 @@
         </header>
         <div class="main__primary">
             <aside>
-                <button>1</button>
+                <button id="imageOfTheDay">Image of The Day</button>
+
                 <button>2</button>
                 <button>3</button>
             </aside>
             <main>
-                <p>Lorem ipsum dolor sit amet...</p>
+                <div id="nasa-container">
+                    <h2>Choose a method from the sidebar.</h2>
+                </div>
             </main>
         </div>
     </div>
-    <!-- <div id="nasa-container"></div> -->
-    <!-- <script type="module" src="scripts/main.js"></script> -->
 </body>
 </html>
